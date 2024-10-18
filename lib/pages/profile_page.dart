@@ -54,9 +54,9 @@ class _ProfilePageState extends State<ProfilePage> {
           TextFormField(
                   decoration: InputDecoration(
                       hintText: "First Name (Required)",
+                      hintStyle: TextStyle(color: Colors.grey[500]),
                       fillColor: Colors.grey[200]!,
                       filled: true,
-
                       contentPadding: const EdgeInsets.symmetric(horizontal: 16),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -76,6 +76,7 @@ class _ProfilePageState extends State<ProfilePage> {
           TextFormField(
               decoration: InputDecoration(
                   hintText: "Last Name (Optional)",
+                  hintStyle: TextStyle(color: Colors.grey[500]),
                   fillColor: Colors.grey[200]!,
                   filled: true,
 

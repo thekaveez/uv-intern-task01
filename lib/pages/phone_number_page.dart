@@ -16,19 +16,19 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
         leading: IconButton(
             onPressed: () => Navigator.of(context).pop(), 
             icon: const Icon(Icons.arrow_back, color: Colors.black,),),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         elevation: 0,
       ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 100),
               const Text(
                   "Enter Your Phone Number",
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
               const SizedBox(height: 10),
               const Text(
                 "Please confirm your country code and enter your phone number",
@@ -43,7 +43,9 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
                     child: TextFormField(
                       keyboardType: TextInputType.phone,
                       decoration: InputDecoration(
+                        // prefixIcon: const Icon(Icons.phone),
                         hintText: "+62",
+                        hintStyle: TextStyle(color: Colors.grey[500]),
                         fillColor: Colors.grey[200]!,
                         filled: true,
                         contentPadding: const EdgeInsets.symmetric(horizontal: 12),
@@ -68,6 +70,7 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
                         keyboardType: TextInputType.phone,
                           decoration: InputDecoration(
                               hintText: "Phone Number",
+                              hintStyle: TextStyle(color: Colors.grey[500]),
                               fillColor: Colors.grey[200]!,
                               filled: true,
 
@@ -91,7 +94,7 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
                 ],
               ),
 
-              const SizedBox(height: 80,),
+              const Spacer(),
 
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -106,7 +109,7 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
                     "Continue",
                     style: TextStyle(fontSize: 18, color: Colors.white), )),
 
-
+              const SizedBox(height: 30),
 
             ],
           ),
